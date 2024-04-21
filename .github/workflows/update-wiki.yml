@@ -9,8 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     # You should set timeout in any kind of GitHub workflows
     timeout-minutes: 5
-    permissions:
-      contents: write
 
     steps:
     - name: Checkout the main repository
