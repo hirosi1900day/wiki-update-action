@@ -26,6 +26,13 @@ jobs:
         # As of Jul 2021, the default branch of a GitHub wiki is `master`, not `main`
         ref: master
         path: .wiki
+    
+    - name: Generate token
+      id: generate_token
+      uses: tibdex/github-app-token@v1
+      with:
+        app_id: ${{ secrets.BOT_APP_ID }}
+        private_key: ${{ secrets.BOT_PRIVATE_KEY }}
 
     - uses: actions/setup-node@v2
     - name: Generate the Wiki Page
